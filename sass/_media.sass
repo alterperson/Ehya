@@ -1,0 +1,61 @@
+@media ( max-width: 1200px )
+  .container
+    max-width: 960px
+
+@media ( max-width: 992px )
+  .container
+    max-width: 720px
+
+@media ( max-width: 768px )
+  .container
+    max-width: 540px
+  .header
+    padding: 16px 0
+    &__button
+      &-mobile
+        display: block
+        margin-top: 7px
+        margin-right: 5px
+  .menu
+    display: none
+    padding: 30px 0
+    background-color: $fill-color
+    border-radius: 10px
+    &__item
+      margin-bottom: 10px
+      &:not(:last-child)
+        margin-right: 0
+    &--mobile
+      position: fixed
+      top: 60px
+      left: 0
+      right: 0
+      display: flex
+      flex-direction: column
+      overflow: auto
+      overflow-x: hidden
+    &__list
+      display: flex
+      flex-direction: column-reverse
+      margin: 0 auto
+      margin-bottom: 20px
+      text-align: center
+@media ( max-width: 576px )
+  .container
+    max-width: 280px
+  .header
+    padding: 16px 0
+    &__logo
+      margin-left: -2px
+
+@media ( min-width: 769px )
+  .menu
+    &__link
+      transition: color 0.2s
+      &:hover
+        color: $btn-color
+  button
+    transition: 0.2s
+    &:hover
+      color: $bg-color
+      background-color: $btn-color
