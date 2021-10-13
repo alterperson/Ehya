@@ -4,6 +4,71 @@
   .book
     &__background
       padding: 76px 40px 76px 40px
+  .recommendations
+    max-width: 580px
+    &__good
+      width: 280px
+      height: 217px
+      padding: 10px 8px 11px 10px
+      &:nth-child(odd)
+        margin-right: 16px
+        margin-bottom: 30px
+    &__button
+      max-width: 577px
+  .good
+    &__image
+      width: 130px
+      height: 193px
+    &__title
+      width: 120px
+      height: 50px
+      margin-left: 10px
+      margin-top: 7px
+      font-weight: 700
+      font-size: 16px
+      line-height: 24px
+    &__type
+      max-width: 120px
+      margin-left: 10px
+      margin-top: 7px
+    &__price
+      max-width: 120px
+      margin-left: 10px
+      margin-top: 22px
+    &__buttons
+      margin-left: 10px
+      margin-top: 15px
+    &__button
+      font-size: 14px
+    &__icon
+      margin-right: -4px
+  .best
+    width: 290px
+    &__list
+      padding-bottom: 0
+    &__position
+      width: 250px
+      &:not(:last-child)
+        margin-bottom: 0
+  .position
+    &__image
+      width: 100px
+      height: 148px
+    &__title
+      width: 120px
+      height: 45px
+      margin-left: 10px
+      margin-top: 7px
+      font-weight: 700
+      font-size: 15px
+      line-height: 18px
+    &__price
+      margin-left: 10px
+    &__button
+      margin-left: 10px
+      margin-top: 11px
+  .line
+    width: 240px
 @media ( max-width: 992px )
   .container
     max-width: 720px
@@ -28,6 +93,67 @@
       padding-right: 15px
   .actions
     margin-top: 46px
+  .recommendations
+    max-width: 420px
+    &__good
+      width: 358px
+      height: 260px
+      margin-bottom: 30px
+      &:nth-child(odd)
+        margin-right: 0
+      &:nth-child(n + 4)
+        display: none
+    &__button
+      max-width: 358px
+      margin-top: 0
+  .good
+    &__image
+      width: 160px
+      height: 238px
+    &__title
+      width: 155px
+      height: 64px
+      margin-left: 20px
+      margin-top: 14px
+      font-weight: 500
+      font-size: 22px
+      line-height: 32px
+    &__type
+      margin-left: 20px
+      margin-top: 15px
+    &__price
+      margin-left: 20px
+      margin-top: 24px
+    &__buttons
+      margin-left: 17px
+      margin-top: 24px
+    &__icon
+      margin-right: 14px
+  .best
+    width: 360px
+    &__list
+      padding-bottom: 26px
+    &__position
+      width: 315px
+      &:not(:last-child)
+        margin-bottom: 36px
+  .position
+    &__image
+      width: 120px
+      height: 178px
+    &__title
+      width: 166px
+      height: 64px
+      margin-left: 23px
+      margin-top: 10px
+      font-weight: 500
+      font-size: 22px
+      line-height: 32px
+    &__price
+      margin-left: 23px
+    &__button
+      margin-left: 23px
+      margin-top: 22px
 @media ( max-width: 768px )
   .container
     max-width: 540px
@@ -89,12 +215,100 @@
     align-items: center
     margin-top: 12px
     &__buy
+      width: 176px
+      height: 40px
       margin-right: 0
       margin-bottom: 15px
-      padding: 9px 19px 8px 19px
     &__read
+      width: 176px
+      height: 40px
       margin-right: 0
-      padding: 9px 29px
+  .goods
+    padding: 25px 0 80px 0
+    &__wrapper
+      flex-direction: column
+      align-items: center
+      padding-bottom: 57px
+    &__title
+      width: 100%
+      font-size: 28px
+      text-align: center
+  .recommendations
+    max-width: 100%
+    text-align: center
+    &__list
+      justify-content: center
+      margin-top: 70px
+    &__good
+      align-items: center
+      width: 280px
+      height: 312px
+      padding: 15px 8px 11px 10px
+      &:nth-child(odd)
+        margin-bottom: 24px
+      &:nth-child(n + 2)
+        display: none
+    &__button
+      height: 48px
+      text-transform: none
+  .good
+    &__image
+      width: 95px
+      height: 137px
+      margin-top: -40px
+    &__title
+      width: 100%
+      height: 39px
+      margin: 15px 0 0 0
+      font-size: 20px
+      text-align: center
+    &__type
+      margin: 0
+      font-size: 14px
+    &__price
+      margin: 0
+      margin-top: 13px
+      font-size: 16px
+    &__buttons
+      margin: 0
+      margin-top: 20px
+    &__button
+      width: 115px
+      height: 36px
+      font-size: 16px
+      margin-right: 20px
+    &__icon
+      margin-right: 0
+  .best
+    padding-top: 54px
+    width: 280px
+    &__list
+      margin-top: 34px
+      padding: 26px 10px 4px 10px
+    &__position
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 0
+    &__button
+      height: 58px
+  .position
+    &__image
+      width: 96px
+      height: 143px
+    &__title
+      width: 110px
+      height: 50px
+      margin-left: 14px
+      margin-top: 4px
+      font-family: 'Roboto Condensed', sans-serif
+      font-size: 16px
+      line-height: 24px
+    &__price
+      margin-left: 14px
+      margin-top: 10px
+    &__button
+      margin-left: 14px
+      margin-top: 16px
 @media ( max-width: 576px )
   .container
     max-width: 280px
@@ -135,6 +349,33 @@
       background-color: $btn-color
   .actions
     &__buy
+      transition: 0.2s
       &:hover
         color: $btn-color
         background-color: $bg-color
+  .good
+    &__button
+      transition: 0.2s
+      &:hover
+        color: $title-color
+        background-color: $bg-color
+        outline: 2px solid $title-color
+  .position
+    &__button
+      transition: 0.2s
+      &:hover
+        color: $title-color
+        background-color: $bg-color
+        outline: 2px solid $title-color
+  .recommendations
+    &__button
+      transition: 0.2s
+      &:hover
+        color: $bg-color
+        background-color: $btn-color
+  .best
+    &__button
+      transition: 0.2s
+      &:hover
+        color: $bg-color
+        background-color: $btn-color
