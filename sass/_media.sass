@@ -89,8 +89,6 @@
       margin-top: 26px
     &__button
       font-size: 16px
-      padding-left: 15px
-      padding-right: 15px
   .actions
     margin-top: 46px
   .recommendations
@@ -231,24 +229,28 @@
       padding-bottom: 57px
     &__title
       width: 100%
-      font-size: 28px
+      font-size: 36px
       text-align: center
   .recommendations
     max-width: 100%
     text-align: center
     &__list
-      justify-content: center
+      justify-content: space-between
+      flex-wrap: nowrap
+      gap: 30px
       margin-top: 70px
     &__good
+      flex-direction: column
       align-items: center
       width: 280px
       height: 312px
       padding: 15px 8px 11px 10px
       &:nth-child(odd)
         margin-bottom: 24px
-      &:nth-child(n + 2)
+      &:nth-child(n + 3)
         display: none
     &__button
+      max-width: 100%
       height: 48px
       text-transform: none
   .good
@@ -256,11 +258,13 @@
       width: 95px
       height: 137px
       margin-top: -40px
+    &__info
+      align-items: center
     &__title
       width: 100%
       height: 39px
       margin: 15px 0 0 0
-      font-size: 20px
+      font-size: 18px
       text-align: center
     &__type
       margin: 0
@@ -281,20 +285,21 @@
       margin-right: 0
   .best
     padding-top: 54px
-    width: 280px
+    width: 470px
     &__list
       margin-top: 34px
-      padding: 26px 10px 4px 10px
+      padding: 26px 10px 34px 10px
     &__position
       width: 100%
+      height: 250px
       &:not(:last-child)
         margin-bottom: 0
     &__button
       height: 58px
   .position
     &__image
-      width: 96px
-      height: 143px
+      width: 150px
+      height: auto
     &__title
       width: 110px
       height: 50px
@@ -335,6 +340,29 @@
       line-height: 23px
     &__background
       padding: 60px 68px 56px 68px
+  .goods
+    &__title
+      font-size: 28px
+  .recommendations
+    &__good
+      &:nth-child(n+2)
+        display: none
+  .good
+    &__title
+      font-size: 20px
+  .best
+    width: 280px
+    &__position
+      height: 148px
+      &:not(:last-child)
+        margin-bottom: 30px
+  .position
+    &__image
+      width: 96px
+      height: 143px
+    &__info
+      margin-left: 0
+      margin-top: 0
 
 @media ( min-width: 769px )
   .menu
