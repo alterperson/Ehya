@@ -1,0 +1,39 @@
+.unpublished
+  padding: 58px 0 80px 0
+  background-color: $title-color
+  &-slider
+    position: relative
+    margin-top: 60px
+    &__button
+      position: absolute
+      top: -112px
+      right: 1px
+      z-index: 90
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 56px
+      height: 56px
+      background-color: transparent
+      background-repeat: no-repeat
+      background-position: center
+      border: 2px solid $bg-color
+      border-radius: 50%
+      cursor: pointer
+      &--prev
+        right: 77px
+      &--next
+        right: 0
+  &__title
+    margin-top: 4px
+    font-family: Roboto Condensed
+    font-weight: 700
+    font-size: 36px
+    line-height: 48px
+    letter-spacing: 0.2px
+    color: $bg-color
+  &__image
+    width: 204px
+    height: 298px
+    border-radius: 8px
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08)
