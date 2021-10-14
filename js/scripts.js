@@ -8,9 +8,9 @@ loves.forEach((love) => {
   love.addEventListener("click", () => love.classList.toggle("icon__path--active"));
 });
 
-const advantagesSlider = new Swiper(".advantages-slider", {
+const advantagesSwiper = new Swiper(".advantages-swiper", {
   watchOverflow: false,
-  slidesPerView: 1,
+  slidesPerView: 4,
   spaceBetween: 26,
 
   breakpoints: {
@@ -18,13 +18,13 @@ const advantagesSlider = new Swiper(".advantages-slider", {
       slidesPerView: 2,
     },
     769: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     993: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
     1201: {
-      slidesPerView: 5,
+      slidesPerView: 4,
     },
   },
 
@@ -36,6 +36,20 @@ const advantagesSlider = new Swiper(".advantages-slider", {
   navigation: {
     prevEl: ".advantages-slider__button--prev",
     nextEl: ".advantages-slider__button--next",
+  },
+});
+
+const advantagesSwiperGrid = new Swiper(".advantages-swiper-grid", {
+  watchOverflow: false,
+  slidesPerView: 2,
+  grid: {
+    rows: 2,
+  },
+  spaceBetween: 10,
+
+  navigation: {
+    prevEl: ".advantages-slider-grid__button--prev",
+    nextEl: ".advantages-slider-grid__button--next",
   },
 });
 
