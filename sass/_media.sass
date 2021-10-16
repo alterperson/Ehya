@@ -86,6 +86,26 @@
   .publishers
     &-container
       max-width: 980px
+  .post
+    &--main
+      width: 420px
+    &--small
+      width: 460px
+    &__title
+      width: 210px
+      font-size: 16px
+      &--main
+        width: 400px
+        font-size: 24px
+    &__description
+      width: 400px
+      font-size: 16px
+    &__sublist
+      width: 20px
+    &__info
+      margin-left: 25px
+    &__date
+      width: 210px
 @media ( max-width: 992px )
   .container
     max-width: 720px
@@ -196,11 +216,44 @@
   .publishers
     &-container
       max-width: 760px
+  .post
+    &--main
+      width: 340px
+    &--small
+      width: 380px
+    &__image
+      object-fit: cover
+      &--small
+        width: 160px
+    &__info
+      margin-left: 10px
+    &__date
+      width: 190px
+    &__title
+      width: 190px
+      font-size: 14px
+      line-height: 22px
+      &--main
+        width: 320px
+        font-size: 18px
+        line-height: 22px
+    &__description
+      width: 310px
+      font-size: 14px
+      line-height: 22px
+    &__link
+      font-size: 14px
 @media ( max-width: 768px )
   .container
     max-width: 540px
   .header
+    position: fixed
     padding: 16px 0
+    left: 0
+    top: 0
+    right: 0
+    z-index: 99
+    background-color: $bg-color
     &__button
       &-mobile
         display: block
@@ -209,17 +262,19 @@
   .menu
     display: none
     padding: 30px 0
-    background-color: $fill-color
-    border-radius: 10px
+    background-color: $title-color
     &__item
-      margin-bottom: 10px
+      margin-bottom: 25px
       &:not(:last-child)
         margin-right: 0
+    &__link
+      color: $bg-color
     &--mobile
       position: fixed
       top: 60px
       left: 0
       right: 0
+      bottom: 0
       display: flex
       flex-direction: column
       overflow: auto
@@ -228,7 +283,7 @@
       display: flex
       flex-direction: column-reverse
       margin: 0 auto
-      margin-bottom: 20px
+      margin-bottom: 30px
       text-align: center
   .banner
     padding: 36px 0 28px 0
@@ -419,6 +474,32 @@
       flex-basis: 30%
       width: 162px
       margin-bottom: 40px
+  .blog
+    &__list
+      flex-direction: column
+    &__sublist
+      margin-left: 0
+  .post
+    &--main
+      width: 100%
+    &--small
+      width: 100%
+    &__info
+      margin-left: 20px
+    &__title
+      width: 225px
+      font-size: 18px
+      &--main
+        width: 100%
+        font-size: 30px
+        line-height: 32px
+    &__description
+      width: 100%
+      font-size: 18px
+      line-height: 26px
+    &__image
+      &--small
+        width: 250px
 @media ( max-width: 576px )
   .container
     max-width: 280px
@@ -603,6 +684,55 @@
       text-align: center
       letter-spacing: 0.2px
       overflow: auto
+  
+  .blog
+    padding: 56px 0 48px 0
+    &__title
+      width: 100%
+      font-size: 28px
+      line-height: 36px
+      text-align: center
+      letter-spacing: 0.2px
+    &__list
+      margin-top: 47px
+    &__button
+      order: 1
+      margin: 7px auto 0 auto
+      padding: 10px 44px
+  .post
+    &__title
+      width: 175px
+      height: 40px
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: 0.175px
+      &--main
+        width: 100%
+        height: 31px
+        margin: 17px 0 0 0px
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: 0.2px
+    &--small
+      height: 90px
+      margin-bottom: 31px
+    &__image
+      &--small
+        width: 90px
+      &--main
+        width: 100%
+        height: 121px
+    &__description
+      margin: 0
+      font-size: 12px
+      line-height: 24px
+    &__date
+      font-size: 10px
+      line-height: 20px
+    &__link
+      font-size: 10px
+      line-height: 20px
+      letter-spacing: 0.125px
 @media ( min-width: 769px )
   .menu
     &__link
@@ -652,10 +782,8 @@
         transition: 0.2s
         &:hover
           border-color: $btn-color
-  .stories
-    &-item
-      &__bookmark
-        path
-          transition: 0.2s
-          &:hover
-            fill: #1565D8
+  .post
+    &__link
+      transition: 0.2s
+      &:hover
+        color: $title-color

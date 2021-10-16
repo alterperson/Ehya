@@ -51,20 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  const advantagesSwiperGrid = new Swiper(".advantages-swiper-grid", {
-    watchOverflow: false,
-    slidesPerView: 2,
-    grid: {
-      rows: 2,
-    },
-    spaceBetween: 10,
-
-    navigation: {
-      prevEl: ".advantages-slider-grid__button--prev",
-      nextEl: ".advantages-slider-grid__button--next",
-    },
-  });
-
   const unpublisedSwiper = new Swiper(".unpublished-swiper", {
     watchOverflow: false,
     slidesPerView: 1,
