@@ -72,6 +72,17 @@
   .advantages
     &-swiper
       margin-left: 18px
+  .stories
+    &-container
+      max-width: 900px
+    &__item
+      &--small
+        width: 270px
+    &-item
+      &__pic
+        &--small
+          height: 170px
+          width: 270px
 @media ( max-width: 992px )
   .container
     max-width: 720px
@@ -155,6 +166,30 @@
     &__button
       margin-left: 23px
       margin-top: 22px
+  .histories
+    &__sublist
+      column-gap: 138px
+    &__item
+      &-wrapper
+        &:nth-child(n +3)
+          display: none
+  .stories
+    &-container
+      max-width: 760px
+    &__description
+      margin-right: 15px
+    &__item
+      &--main
+        height: 300px
+      &--small
+        width: 228px
+    &-item
+      &__pic
+        &--small
+          width: 228px
+          height: 144px
+      &__author
+        margin: 10px 0 10px 0
 @media ( max-width: 768px )
   .container
     max-width: 540px
@@ -333,6 +368,40 @@
         height: 48px
         &--prev
           right: 279px
+  .stories
+    &-container
+      max-width: 540px
+    &__title
+      width: 100%
+      margin-bottom: 24px
+      text-align: center
+    &__description
+      width: 100%
+      margin-right: 0
+      line-height: 25px
+      text-align: center
+    &__item
+      &--main
+        height: 210px
+        margin-bottom: 20px
+      &--small
+        width: 228px
+        &:nth-child(n+6)
+          display: none
+    &-item
+      align-items: center
+      &__pic
+        &--small
+          height: 144px
+      &__author
+        margin: 10px 0 10px 0
+      &__button
+        width: 70px
+        height: 70px
+      &__bookmark
+        position: static
+        display: block
+        margin-top: 20px
 @media ( max-width: 576px )
   .container
     max-width: 280px
@@ -437,10 +506,10 @@
       letter-spacing: 0.2px
       color: $title-color
     &__text
+      width: 100%
       margin-top: 11px
       font-size: 12px
       line-height: 20px
-      color: $text-color
   .unpublished
     padding-bottom: 134px
     &-slider
@@ -448,6 +517,56 @@
         right: 83px
         &--prev
           right: 149px
+  .stories
+    padding: 44px 0 42px 0
+    &-container
+      max-width: 300px
+    &__title
+      margin-bottom: 24px
+      font-size: 28px
+      line-height: 36px
+      text-align: center
+      letter-spacing: 0.2px
+    &__description
+      width: 280px
+      margin: 0 auto
+    &__item
+      &--main
+        margin-top: 30px
+        margin-bottom: 20px
+      &--small
+        width: 140px
+        &:nth-child(n+6)
+          display: none
+    &-item
+      align-items: center
+      &__pic
+        &--small
+          width: 140px
+          height: 138px
+          img
+            height: 100%
+            object-fit: cover
+      &__author
+        margin: 16px 0 7px 0
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        letter-spacing: 0.2px
+      &__text
+        font-size: 12px
+        line-height: 20px
+      &__button
+        &--main
+          width: 56px
+          height: 56px
+        svg
+          width: 17px
+          height: 22px
+      &__bookmark
+        width: 10px
+        height: 14px
+        margin-top: 15px
 
 @media ( min-width: 769px )
   .menu
@@ -492,3 +611,10 @@
       &:hover
         color: $bg-color
         background-color: $btn-color
+  .stories
+    &-item
+      &__bookmark
+        path
+          transition: 0.2s
+          &:hover
+            fill: #1565D8

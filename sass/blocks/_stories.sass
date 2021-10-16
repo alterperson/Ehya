@@ -1,0 +1,85 @@
+.stories
+  padding: 103px 0 100px 0
+  &-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+    margin: 0 auto
+    max-width: 1005px
+  &__title
+    font-family: 'Roboto Condensed', sasn-serif
+    font-weight: 700
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+    color: $title-color
+  &__description
+    width: 383px
+    height: 130px
+    margin-right: 34px
+    font-size: 18px
+    line-height: 32px
+    overflow: auto
+  &__item
+    &--main
+      width: 100%
+      height: 380px
+      margin-top: 19px
+      margin-bottom: 30px
+.stories
+  position: relative
+  &-item
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    &__author
+      margin: 21px 0 10px 0
+      font-family: Roboto, sans-serif
+      font-weight: 500
+      font-size: 22px
+      line-height: 32px
+      letter-spacing: 0.2px
+      color: #183B56
+    &__pic
+      position: relative
+      height: 200px
+      &--main
+        height: 380px
+        object-fit: cover
+      &--small
+        width: 315px
+    &--small
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 315px
+      height: 200px
+      overflow: hidden
+    &__button
+      position: absolute
+      top: 50%
+      left: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      transform: translate(-50%,-50%)
+      cursor: pointer
+      &--main
+        width: 100px
+        height: 100px
+        background-color: $bg-color
+        border-radius: 50%
+    &__bookmark
+      position: absolute
+      right: 0
+      bottom: 36px
+      width: 15px
+      height: 20px
+      background-image: url(../images/bookmark.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      cursor: pointer
+      &--active
+        background-image: url(../images/bookmark-active.svg)
