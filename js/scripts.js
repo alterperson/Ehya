@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 26,
 
     breakpoints: {
+      320: {
+        slidesPerView: 4,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
       577: {
         slidesPerView: 2,
       },
