@@ -83,6 +83,9 @@
         &--small
           height: 170px
           width: 270px
+  .publishers
+    &-container
+      max-width: 980px
 @media ( max-width: 992px )
   .container
     max-width: 720px
@@ -190,6 +193,9 @@
           height: 144px
       &__author
         margin: 10px 0 10px 0
+  .publishers
+    &-container
+      max-width: 760px
 @media ( max-width: 768px )
   .container
     max-width: 540px
@@ -402,6 +408,17 @@
         position: static
         display: block
         margin-top: 20px
+  .publishers
+    &-container
+      max-width: 560px
+    &__list
+      flex-wrap: wrap
+      &--second
+        display: none
+    &__item
+      flex-basis: 30%
+      width: 162px
+      margin-bottom: 40px
 @media ( max-width: 576px )
   .container
     max-width: 280px
@@ -567,7 +584,25 @@
         width: 10px
         height: 14px
         margin-top: 15px
-
+  .publishers
+    padding: 37px 0 37px 0
+    &-container
+      max-width: 300px
+    &__list
+      margin: 29px 0 0 0
+    &__item
+      flex-basis: 50%
+      width: 150px
+      margin-bottom: 19px
+    &__title
+      width: 270px
+      height: 90px
+      margin: 0 auto
+      font-size: 24px
+      line-height: 30px
+      text-align: center
+      letter-spacing: 0.2px
+      overflow: auto
 @media ( min-width: 769px )
   .menu
     &__link
