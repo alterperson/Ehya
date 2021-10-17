@@ -32,7 +32,8 @@
     visibility: hidden
     opacity: 0
     transition: opacity 0.2s
-    overflow: auto
+    overflow: hidden
+    overflow-y: auto
     &--visible
       visibility: visible
       opacity: 1
@@ -44,12 +45,15 @@
     border: none
     cursor: pointer
   &__title
+    width: 100%
+    height: 23px
     margin: 0
     font-weight: bold
     font-size: 18px
     line-height: 23px
     text-align: center
     text-transform: uppercase
+    overflow: hidden
   &__form
     display: flex
     align-items: center
@@ -66,18 +70,22 @@
     min-height: 123px
     margin-top: 14px
   &__button
-    min-width: 160px
-    min-height: 50px
+    width: 160px
+    height: 50px
     margin-top: 16px
-    // margin-right: 41px
     color: $title-color
     background-color: $bg-color
+    overflow: hidden
   &__require
+    width: 135px
+    height: 32px
     margin-top: 19px
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
+    overflow: hidden
+    overflow-y: auto
 label.invalid
   position: absolute
   left: 0

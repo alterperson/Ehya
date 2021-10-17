@@ -29,6 +29,24 @@ document.addEventListener("DOMContentLoaded", function () {
   $(document).on("keyup", function (e) {
     if (e.key == "Escape") closeModal();
   });
+
+  $('.menu__list a[href^="#"], .menu__list *[data-href^="#"], .up').on("click", function (e) {
+    e.preventDefault();
+    var speed = 1000;
+    var d = $(this).attr("data-href") ? $(this).attr("data-href") : $(this).attr("href");
+    $("html,body")
+      .stop()
+      .animate({ scrollTop: $(d).offset().top - 100 }, speed);
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $(".up").fadeIn();
+    } else {
+      $(".up").fadeOut();
+    }
+  });
+
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",

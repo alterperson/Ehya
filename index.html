@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="top">
       <div class="container">
         <div class="header__navbar">
           <a href="#" class="header__logo logo">
@@ -25,13 +25,13 @@
           <nav class="menu header__menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">Рекомендации</a>
+                <a href="#goods" class="menu__link">Рекомендации</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Книги</a>
+                <a href="#books" class="menu__link">Книги</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Блог</a>
+                <a href="#blog" class="menu__link">Блог</a>
               </li>
             </ul>
             <button class="button header__button" type="button" data-toggle="modal" data-href="#register-modal">Получить</button>
@@ -75,7 +75,7 @@
       </div>
     </section>
 
-    <section class="goods">
+    <section class="goods" id="goods">
       <div class="container">
         <div class="goods-wrapper">
           <div class="goods__recommendations recommendations">
@@ -321,7 +321,7 @@
       </div>
     </section>
 
-    <section class="unpublished">
+    <section class="unpublished" id="books">
       <div class="container">
         <h2 class="unpublished__title">Неизданные книги</h2>
         <div class="unpublished-slider">
@@ -511,7 +511,7 @@
       </div>
     </section>
 
-    <section class="blog">
+    <section class="blog" id="blog">
       <div class="container blog-container">
         <h2 class="blog__title">Ehya Блог</h2>
         <a href="#" class="button blog__button">Все блоги</a>
@@ -724,6 +724,8 @@
       </div>
       <!-- /.modal__dialog -->
     </div>
+
+    <a class="up" href="#top">☝</a>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

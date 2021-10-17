@@ -13,7 +13,8 @@
       margin: 24px 0 30px 0
       font-size: 15px
       line-height: 28px
-      overflow: auto
+      overflow: hidden
+      overflow-y: auto
   &__product, &__service, &__company, &__more
     width: 165px
     margin-right: 30px
@@ -58,6 +59,7 @@
       line-height: 22px
       color: $title-color
       overflow: hidden
+      overflow-y: auto
 .footer
   &__heading
     margin-bottom: 31px
@@ -69,3 +71,10 @@
       font-size: 18px
       line-height: 25px
       overflow: hidden
+.up
+  display: none
+  position: fixed
+  right: 50px
+  bottom: 50px
+  font-size: 56px
+  cursor: pointer
