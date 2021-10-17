@@ -75,6 +75,8 @@
   .stories
     &-container
       max-width: 900px
+    &__title
+      width: 450px
     &__item
       &--small
         width: 270px
@@ -83,6 +85,10 @@
         &--small
           height: 170px
           width: 270px
+      &__title
+        max-width: 240px
+      &__description
+        max-width: 240px
   .publishers
     &-container
       max-width: 980px
@@ -98,6 +104,13 @@
       &--main
         width: 400px
         font-size: 24px
+    &__image
+      &--main
+        width: 420px
+        height: 249px
+      &--small
+        width: 225px
+        height: 135px
     &__description
       width: 400px
       font-size: 16px
@@ -107,6 +120,17 @@
       margin-left: 25px
     &__date
       width: 210px
+  .stories
+    &__title
+      width: 460px
+    &-item
+      &__author
+        max-width: 250px
+      &__text
+        max-width: 250px
+  .blog
+    &__title
+      max-width: 410px
 @media ( max-width: 992px )
   .container
     max-width: 720px
@@ -131,6 +155,8 @@
     margin-top: 46px
   .recommendations
     max-width: 420px
+    &__title
+      max-width: 350px
     &__good
       width: 358px
       height: 260px
@@ -197,16 +223,21 @@
       height: 250px
     &-container
       max-width: 560px
-  .histories
-    &__sublist
-      column-gap: 138px
-    &__item
-      &-wrapper
-        &:nth-child(n +3)
-          display: none
+  .unpublished
+    &__title
+      width: 550px
+  // .histories
+  //   &__sublist
+  //     column-gap: 138px
+  //   &__item
+  //     &-wrapper
+  //       &:nth-child(n +3)
+  //         display: none
   .stories
     &-container
       max-width: 760px
+    &__title
+      max-width: 340px
     &__description
       margin-right: 15px
     &__item
@@ -220,7 +251,10 @@
           width: 228px
           height: 144px
       &__author
+        max-width: 210px
         margin: 10px 0 10px 0
+      &__description
+        max-width: 210px
   .publishers
     &-container
       max-width: 760px
@@ -231,9 +265,12 @@
       width: 365px
       height: 96px
     &__image
-      object-fit: cover
+      &--main
+        max-width: 340px
+        height: 202px
       &--small
         width: 160px
+        height: 96px
     &__info
       margin-left: 10px
     &__date
@@ -300,6 +337,8 @@
     display: none
     padding: 30px 0
     background-color: $title-color
+    &__list
+      height: 141px
     &__item
       margin-bottom: 25px
       &:not(:last-child)
@@ -453,7 +492,7 @@
   .advantages
     &-slider
       &__item
-        margin-right: 10px
+        margin-right: 6px
         margin-bottom: 10px
       &__button
         &--prev
@@ -468,6 +507,7 @@
     text-align: center
     padding: 42px 0 135px 0
     &__title
+      width: 100%
       margin-top: 0
       font-size: 28px
     &-slider
@@ -506,7 +546,10 @@
         &--small
           height: 144px
       &__author
+        max-width: 140px
         margin: 10px 0 10px 0
+      &__description
+        max-width: 140px
       &__button
         width: 70px
         height: 70px
@@ -551,8 +594,13 @@
       font-size: 18px
       line-height: 26px
     &__image
+      &--main
+        width: 100%
+        max-width: none
+        height: 321px
       &--small
-        width: 250px
+        width: 251px
+        height: 151px
   .subscribe
     &-container
       max-width: 540px
@@ -723,17 +771,18 @@
     &:nth-child(2n+2)
       margin-top: 9px
   .unpublished
-    padding-bottom: 134px
+    padding-bottom: 135px
     &-slider
       &__button
         right: 83px
         &--prev
           right: 149px
   .stories
-    padding: 45px 0 42px 0
+    padding: 44px 0 42px 0
     &-container
       max-width: 300px
     &__title
+      height: 36px
       margin-bottom: 24px
       font-size: 28px
       line-height: 36px
@@ -760,6 +809,7 @@
             height: 100%
             object-fit: cover
       &__author
+        height: 20px
         margin: 16px 0 7px 0
         font-weight: 500
         font-size: 16px
@@ -820,6 +870,7 @@
     padding: 56px 0 47px 0
     &__title
       width: 100%
+      height: 37px
       font-size: 28px
       line-height: 36px
       text-align: center
@@ -848,12 +899,12 @@
       height: 90px
       margin-bottom: 31px
     &__image
-      &--small
-        width: 90px
-        height: 100%
       &--main
         width: 100%
         height: 121px
+      &--small
+        width: 90px
+        height: 90px
     &__description
       margin: 0
       font-size: 12px
@@ -900,21 +951,21 @@
       flex-basis: 100%
       align-items: center
       order: 2
-      margin: 8px 0 0 0
+      margin: 6px 0 0 0
       &__tag
         width: 100%
         margin: 11px 0 15px 0
         text-align: center
     &__product, &__service, &__company, &__more
       flex-basis: 50%
-      margin-bottom: 23px
+      margin-bottom: 26px
       padding-left: 6px
     &__bottom
       display: none
   .product, .service, .company, .more
     &-list
       &__item
-        margin-bottom: 16px
+        margin-bottom: 12px
       &__link
         font-size: 14px
         line-height: 18px

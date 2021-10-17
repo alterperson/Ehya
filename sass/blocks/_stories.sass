@@ -1,4 +1,5 @@
 .stories
+  position: relative
   padding: 103px 0 102px 0
   &-container
     display: flex
@@ -8,12 +9,15 @@
     margin: 0 auto
     max-width: 1005px
   &__title
+    width: 547px
+    height: 125px
     font-family: 'Roboto Condensed', sasn-serif
     font-weight: 700
     font-size: 48px
     line-height: 60px
     letter-spacing: 0.2px
     color: $title-color
+    overflow: auto
   &__description
     width: 383px
     height: 130px
@@ -27,14 +31,14 @@
       height: 380px
       margin-top: 19px
       margin-bottom: 30px
-.stories
-  position: relative
   &-item
     position: relative
     display: flex
     flex-direction: column
     align-items: flex-start
     &__author
+      max-width: 290px
+      height: 32px
       margin: 23px 0 11px 0
       font-family: Roboto, sans-serif
       font-weight: 500
@@ -42,6 +46,11 @@
       line-height: 32px
       letter-spacing: 0.2px
       color: #183B56
+      overflow: hidden
+    &__description
+      max-width: 290px
+      height: 18px
+      overflow: hidden
     &__pic
       position: relative
       height: 200px
