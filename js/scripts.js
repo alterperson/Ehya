@@ -21,19 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const advantagesSwiper = new Swiper(".advantages-swiper", {
+    touchEventsTarget: true,
+    slidesOffsetAfter: 0,
     watchOverflow: false,
+    autoHeight: false,
     slidesPerView: 4,
-    spaceBetween: 26,
 
     breakpoints: {
       320: {
-        slidesPerView: 4,
         grid: {
           rows: 2,
-          fill: "row",
         },
-      },
-      577: {
+        slidesPerRow: 2,
         slidesPerView: 2,
       },
       769: {
@@ -42,19 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
       993: {
         slidesPerView: 3,
       },
-      1201: {
-        slidesPerView: 4,
-      },
+    },
+
+    navigation: {
+      nextEl: ".advantages-slider__button--next",
+      prevEl: ".advantages-slider__button--prev",
     },
 
     keyboard: {
       enabled: true,
       onlyInViewport: false,
-    },
-
-    navigation: {
-      prevEl: ".advantages-slider__button--prev",
-      nextEl: ".advantages-slider__button--next",
     },
   });
 
