@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const playBtnThird = document.querySelector(".stories-item__button--third");
   const modalButton = $("[data-toggle=modal]");
   const closeModalButton = $(".modal__close");
+  const modalOverlay = $(".modal__overlay");
   var player;
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
+  modalOverlay.on("click", closeModal);
   function openModal() {
     const targetModal = $(this).attr("data-href");
     $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
