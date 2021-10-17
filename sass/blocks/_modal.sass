@@ -1,0 +1,112 @@
+.modal
+  &__overlay
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 143, 223, 0.39)
+    z-index: 100
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.2s
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__dialog
+    position: fixed
+    left: 50%
+    top: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-height: 90vh
+    max-width: 478px
+    margin-top: -6px
+    padding: 33px 87px 35px 89px
+    color: $bg-color
+    background-color: $btn-color
+    transform: translate(-50%, -59%)
+    border-radius: 8px
+    z-index: 101
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.2s
+    overflow: auto
+    &--visible
+      visibility: visible
+      opacity: 1
+  &__close
+    position: absolute
+    top: 16px
+    right: 11px
+    background-color: transparent
+    border: none
+    cursor: pointer
+  &__title
+    margin: 0
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-align: center
+    text-transform: uppercase
+  &__form
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+  &__input
+    width: 100%
+    &-wrapper
+      position: relative
+      width: 100%
+      margin-top: 15px
+  &__message
+    width: 100%
+    min-height: 123px
+    margin-top: 14px
+  &__button
+    min-width: 160px
+    min-height: 50px
+    margin-top: 16px
+    // margin-right: 41px
+    color: $title-color
+    background-color: $bg-color
+  &__require
+    margin-top: 19px
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
+label.invalid
+  position: absolute
+  left: 0
+  bottom: -15px
+  display: block
+  width: 100%
+  padding: 6px 10px 4px 10px
+  font-weight: 600
+  font-size: 10px
+  color: $bg-color
+  background-color: $fill-color
+  border-radius: 0 0 2px 2px
+.input
+  height: 50px
+  padding: 0 23px
+  font-size: 12px
+  line-height: 15px
+  color: $text-color
+  background-color: $bg-color
+  border: none
+  border-radius: 4px
+  outline: none
+.message
+  padding: 18px 23px
+  font-size: 12px
+  line-height: 15px
+  color: $text-color
+  background-color: $bg-color
+  border: none
+  border-radius: 4px
+  outline: none
+  resize: none

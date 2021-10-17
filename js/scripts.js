@@ -7,8 +7,41 @@ document.addEventListener("DOMContentLoaded", function () {
   const playBtnFirst = document.querySelector(".stories-item__button--first");
   const playBtnSecond = document.querySelector(".stories-item__button--second");
   const playBtnThird = document.querySelector(".stories-item__button--third");
-
+  const modalButton = $("[data-toggle=modal]");
+  const closeModalButton = $(".modal__close");
   var player;
+  modalButton.on("click", openModal);
+  closeModalButton.on("click", closeModal);
+  function openModal() {
+    const targetModal = $(this).attr("data-href");
+    $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
+    $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
+  }
+  function closeModal() {
+    const modalOverlay = $(".modal__overlay");
+    const modalDialog = $(".modal__dialog");
+    modalOverlay.removeClass("modal__overlay--visible");
+    modalDialog.removeClass("modal__dialog--visible");
+    $("label.invalid").remove();
+  }
+  $(document).on("keyup", function (e) {
+    if (e.key == "Escape") closeModal();
+  });
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: { required: "Имя обязательно", minlength: "Не менее 2 символов" },
+        email: { required: "Почта обязательна", email: "Формат: name@domain.com" },
+        phone: { required: "Телефон обязателен", phone: "Формат: +7(999)999-99-99", minlength: "Введите полный номер телефона" },
+      },
+    });
+  });
+
+  // AOS.init({ disable: "mobile" });
+  $(".phone").each(function () {
+    $(this).mask("+0 (000) 000-0000");
+  });
 
   menuBtn.addEventListener("click", () => menu.classList.toggle("menu--mobile"));
 
@@ -144,23 +177,4 @@ document.addEventListener("DOMContentLoaded", function () {
   function videoPlay(event) {
     player3.target.videoPlay();
   }
-
-  // $(".advantages-slider").slick({
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 645,
-  //       settings: {
-  //         slidesToShow: 2,
-  //       },
-  //     },
-  //   ],
-  // });
 });
