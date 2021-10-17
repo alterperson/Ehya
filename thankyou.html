@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ehya - книжный магазин</title>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__navbar">
+          <a href="./" class="header__logo logo">
+            <img class="logo__img" src="images/logo.png" alt="Логотип" />
+          </a>
+
+          <nav class="menu header__menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Рекомендации</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Книги</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Блог</a>
+              </li>
+            </ul>
+            <button class="button header__button" type="button" data-toggle="modal" data-href="#register-modal">Получить</button>
+          </nav>
+
+          <button class="header__button-mobile js-menu">
+            <svg width="22" height="18" viewbox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.09009 2.2H20.9099C21.5119 2.2 22 1.70751 22 1.1C22 0.492487 21.5119 0 20.9099 0H1.09009C0.48805 0 0 0.492487 0 1.1C0 1.70751 0.48805 2.2 1.09009 2.2ZM1.09009 9.94836H20.9099C21.5119 9.94836 22 9.45588 22 8.84836C22 8.24085 21.5119 7.74836 20.9099 7.74836H1.09009C0.48805 7.74836 0 8.24085 0 8.84836C0 9.45588 0.48805 9.94836 1.09009 9.94836ZM20.9099 17.6967H1.09009C0.48805 17.6967 0 17.2042 0 16.5967C0 15.9892 0.48805 15.4967 1.09009 15.4967H20.9099C21.5119 15.4967 22 15.9892 22 16.5967C22 17.2042 21.5119 17.6967 20.9099 17.6967Z"
+                fill="#3A4C66"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="container">
+        <div class="banner__book book thankyou-message">
+          <h1 class="book__title thankyou-message__title">
+            <span class="book__title-fill">Заявка успешно отправлена</span>
+          </h1>
+          <p class="book__description thankyou-message__text">Наши менеджеры свяжутся с Вами в ближайшие 5-10 минут</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <div class="container subscribe-container">
+        <h2 class="subscribe__title">Будь первым, кто узнает о&nbsp;наших акциях</h2>
+        <form class="subscribe__form form" action="send.php" method="POST">
+          <input class="subscribe__input" type="email" placeholder="Ваш Email" name="email" required />
+          <button class="subscribe__button">Регистрация</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer-logo">
+            <a href="index.html" class="footer-logo__link">
+              <img src="images/logo.png" alt="Logo" class="footer-logo__image" />
+            </a>
+            <span class="footer-logo__tag">Создайте современный и креативный веб-сайт с&nbsp;crealand</span>
+            <div class="footer__social">
+              <ul class="footer-social__list">
+                <li class="footer-social__item">
+                  <a href="https://google.com/" target="_blank" class="footer-social__link">
+                    <img src="images/social/google.svg" alt="Иконка: Google" class="footer-social__image" />
+                  </a>
+                </li>
+                <li class="footer-social__item">
+                  <a href="https://twitter.com/" target="_blank" class="footer-social__link">
+                    <img src="images/social/twitter.svg" alt="Иконка: Twitter" class="footer-social__image" />
+                  </a>
+                </li>
+                <li class="footer-social__item">
+                  <a href="https://instagram.com/" target="_blank" class="footer-social__link">
+                    <img src="images/social/instagram.svg" alt="Иконка: Instagram" class="footer-social__image" />
+                  </a>
+                </li>
+                <li class="footer-social__item">
+                  <a href="https://ru.linkedin.com/" target="_blank" class="footer-social__link">
+                    <img src="images/social/linkedin.svg" alt="Иконка: LinkedIn" class="footer-social__image" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__product product">
+            <ul class="product-list">
+              <li class="product-list__item footer__heading">
+                <a href="#" class="product-list__link">Продукт</a>
+              </li>
+              <li class="product-list__item">
+                <a href="#" class="product-list__link">Лэндинг</a>
+              </li>
+              <li class="product-list__item">
+                <a href="#" class="product-list__link">Функции</a>
+              </li>
+              <li class="product-list__item">
+                <a href="#" class="product-list__link">Документация</a>
+              </li>
+              <li class="product-list__item">
+                <a href="#" class="product-list__link">Скидки</a>
+              </li>
+              <li class="product-list__item">
+                <a href="#" class="product-list__link">Расценки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__service service">
+            <ul class="service-list">
+              <li class="service-list__item footer__heading">
+                <a href="#" class="service-list__link">Сервисы</a>
+              </li>
+              <li class="service-list__item">
+                <a href="#" class="service-list__link">Документация</a>
+              </li>
+              <li class="service-list__item">
+                <a href="#" class="service-list__link">Дизайн</a>
+              </li>
+              <li class="service-list__item">
+                <a href="#" class="service-list__link">Темы</a>
+              </li>
+              <li class="service-list__item">
+                <a href="#" class="service-list__link">Илюстрации</a>
+              </li>
+              <li class="service-list__item">
+                <a href="#" class="service-list__link">UI Kit</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__company company">
+            <ul class="company-list">
+              <li class="company-list__item footer__heading">
+                <a href="#" class="company-list__link">Компания</a>
+              </li>
+              <li class="company-list__item">
+                <a href="#" class="company-list__link">О нас</a>
+              </li>
+              <li class="company-list__item">
+                <a href="#" class="company-list__link">Условия</a>
+              </li>
+              <li class="company-list__item">
+                <a href="#" class="company-list__link">Privacy Policy</a>
+              </li>
+              <li class="company-list__item">
+                <a href="#" class="company-list__link">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__more more">
+            <ul class="more-list">
+              <li class="more-list__item footer__heading">
+                <a href="#" class="more-list__link">Еще..</a>
+              </li>
+              <li class="more-list__item">
+                <a href="#" class="more-list__link">Документация</a>
+              </li>
+              <li class="more-list__item">
+                <a href="#" class="more-list__link">Лицензия</a>
+              </li>
+              <li class="more-list__item">
+                <a href="#" class="more-list__link">Изменения</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__heart">
+            <img src="images/heart.svg" alt="Иконка: Любовь" />
+          </div>
+          <span class="footer__copyright">Copyright © 2019. Crafted with love.</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="register-modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <button class="modal__close">
+          <img src="images/close.svg" alt="icon: close" />
+        </button>
+        <h2 class="modal__title modal__title--mb-3">Регистрация</h2>
+        <form action="send.php" method="POST" class="modal__form form">
+          <div class="modal__input-wrapper">
+            <input type="text" class="input modal__input" placeholder="Ваше имя*" name="name" required minlength="2" maxlength="20" />
+          </div>
+          <div class="modal__input-wrapper">
+            <input type="tel" class="input modal__input phone" placeholder="Телефон*" name="phone" required minlength="11" maxlength="11" />
+          </div>
+          <div class="modal__input-wrapper">
+            <input type="email" class="input modal__input" placeholder="Электронная почта*" name="email" required />
+          </div>
+          <textarea cols="30" rows="5" class="message modal__message" placeholder="Сообщение" name="message"></textarea>
+          <button class="button modal__button">Отправить</button>
+          <span class="modal__require">* Обязательные поля</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
