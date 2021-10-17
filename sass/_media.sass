@@ -255,6 +255,18 @@
       font-size: 28px
     &__form
       margin-right: 30px
+  .footer
+    &-logo
+      &__tag
+        width: 180px
+    &__copyright
+      font-size: 14px
+      line-height: 18px
+  .product, .service, .company, .more
+    &-list
+      &__link
+        font-size: 14px
+        line-height: 18px
 @media ( max-width: 768px )
   .container
     max-width: 540px
@@ -540,6 +552,21 @@
       right: 11px
       top: 58px
       bottom: 12px
+  .footer
+    &__top
+      flex-wrap: wrap
+      margin-bottom: 0
+    &-logo
+      flex-basis: 60%
+      &__tag
+        width: 80%
+        font-size: 15px
+        line-height: 28px
+        text-align: left
+    &__product, &__service, &__company, &__more
+      margin: 0
+      margin-bottom: 40px
+      flex-basis: 33%
 @media ( max-width: 576px )
   .container
     max-width: 280px
@@ -816,6 +843,36 @@
       right: 11px
       top: 58px
       bottom: 12px
+  .footer
+    padding: 48px 0 65px 0
+    &-logo
+      flex-basis: 100%
+      align-items: center
+      order: 2
+      margin: 8px 0 0 0
+      &__tag
+        width: 100%
+        margin: 11px 0 13px 0
+        text-align: center
+    &__product, &__service, &__company, &__more
+      margin-bottom: 23px
+      padding-left: 6px
+      flex-basis: 50%
+    &__bottom
+      display: none
+  .product, .service, .company, .more
+    &-list
+      &__item
+        margin-bottom: 16px
+      &__link
+        font-size: 14px
+        line-height: 18px
+  .footer
+    &__heading
+      margin-bottom: 20px
+      a
+        font-size: 16px
+        line-height: 22px
 @media ( min-width: 769px )
   .menu
     &__link
