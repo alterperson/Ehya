@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const loves = document.querySelectorAll(".icon__path");
   const bookmarks = document.querySelectorAll(".stories-item__bookmark");
-  
+
   const modalButton = $("[data-toggle=modal]");
   const closeModalButton = $(".modal__close");
   const modalOverlay = $(".modal__overlay");
@@ -90,6 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       993: {
         slidesPerView: 3,
+      },
+      1201: {
+        slidesPerView: 4,
       },
     },
 
