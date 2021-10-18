@@ -1,4 +1,4 @@
-@media ( max-width: 1200px )
+@media ( max-width: 1201px )
   .container
     max-width: 960px
   .book
@@ -255,7 +255,7 @@
     &--main
       width: 340px
     &--small
-      width: 365px
+      width: 360px
       height: 96px
     &__image
       &--main
@@ -493,7 +493,7 @@
           top: 224px
         &--next
           top: 224px
-          right: -15px
+          right: -10px
     &-swiper
       height: 560px
   .unpublished
@@ -584,7 +584,7 @@
         font-size: 30px
         line-height: 32px
     &__description
-      width: 100%
+      width: 99%
       font-size: 18px
       line-height: 26px
     &__image
@@ -645,6 +645,9 @@
   .thankyou-message
     &__text
       height: auto
+  .up
+    right: 25px
+    font-size: 36px
 @media ( max-width: 576px )
   .container
     max-width: 280px
@@ -918,8 +921,9 @@
       flex-direction: column
       max-width: 320px
       padding: 26px 0 28px 0
+      background-image: url(../images/subscribe-bg-mobile.jpg)
     &__title
-      width: 200px
+      width: 210px
       height: 108px
       margin-left: 24px
       margin-right: auto
@@ -978,7 +982,7 @@
   .thankyou-message
     &__text
       height: auto
-@media ( min-width: 769px )
+@media ( min-width: 993px )
   .menu
     &__link
       transition: color 0.2s
@@ -1000,6 +1004,11 @@
       transition: 0.2s
       &:hover
         background-color: $btn-color
+  .icon
+    &__path
+      transition: 0.2s
+      &:hover
+        fill: red
   .position
     &__button
       transition: 0.2s
@@ -1023,6 +1032,22 @@
         transition: 0.2s
         &:hover
           background-color: $btn-color
+  .stories
+    &-item
+      &__button
+        &--main
+          transition: 0.2s
+          &:hover
+            background-color: $title-color
+      &__bookmark
+        transition: 0.2s
+        &:hover
+          background-image: url(../images/bookmark-active.svg)
+  .play
+    &-button
+      transition: 0.2s
+      &:hover
+        fill: $btn-color
   .unpublished
     &-slider
       &__button
@@ -1067,6 +1092,7 @@
       padding: 13px 0 13px 0
   .modal
     &__dialog
+      top: 60%
       height: 90vh
     &__title
       padding: 22px
