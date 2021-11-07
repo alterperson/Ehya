@@ -71,7 +71,7 @@
     width: 240px
   .advantages
     &-container
-      max-width: 860px
+      max-width: 850px
   .stories
     &-container
       max-width: 900px
@@ -484,9 +484,6 @@
       margin-top: 40px
   .advantages
     &-slider
-      &__item
-        margin-right: 6px
-        margin-bottom: 10px
       &__button
         &--prev
           left: -15px
@@ -496,6 +493,9 @@
           right: -10px
     &-swiper
       height: 560px
+  .swiper
+    &-slide
+      height: auto
   .unpublished
     text-align: center
     padding: 42px 0 135px 0
@@ -708,7 +708,7 @@
     &__button
       margin-top: 16px
   .advantages
-    padding-bottom: 113px
+    padding-bottom: 114px
     &-slider
       &__item
         width: 140px!important
@@ -716,7 +716,7 @@
         position: absolute
         bottom: -82px
         left: 88px
-        z-index: 99
+        z-index: 1
         display: flex
         justify-content: center
         align-items: center
@@ -1088,8 +1088,7 @@
 @media (orientation: landscape) and (max-height: 540px)
   .header
     &__button
-      height: auto
-      padding: 13px 0 13px 0
+      min-height: 48px
   .modal
     &__dialog
       top: 60%
