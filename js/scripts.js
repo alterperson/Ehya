@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       errorClass: "invalid",
       messages: {
         name: { required: "Имя обязательно", minlength: "Не менее 2 символов" },
-        email: { required: "Почта обязательна", email: "Формат: name@domain.com" },
+        email: { required: "Почта обязательна", email: "Формат: name@domain.com", minlength: "Формат: name@domain.com" },
         phone: { required: "Телефон обязателен", phone: "Формат: +7(999)999-99-99", minlength: "Введите полный номер телефона" },
       },
     });
@@ -71,28 +71,37 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const advantagesSwiper = new Swiper(".advantages-swiper", {
-    touchEventsTarget: true,
-    slidesOffsetAfter: 0,
-    watchOverflow: false,
-    autoHeight: false,
     slidesPerView: 4,
+    spaceBetween: 26,
 
     breakpoints: {
       320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
         grid: {
           rows: 2,
         },
-        slidesPerRow: 2,
-        slidesPerView: 2,
       },
       769: {
         slidesPerView: 2,
+        spaceBetween: 10,
+        grid: {
+          rows: 1,
+        },
       },
       993: {
         slidesPerView: 3,
+        spaceBetween: 15,
+        grid: {
+          rows: 1,
+        },
       },
       1201: {
         slidesPerView: 4,
+        spaceBetween: 26,
+        grid: {
+          rows: 1,
+        },
       },
     },
 
