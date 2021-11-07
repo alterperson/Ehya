@@ -16,10 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  function videoPlay(event) {
-    player.target.videoPlay();
-  }
-
   playBtnFirst.addEventListener("click", function onYouTubeIframeAPIReady() {
     player = new YT.Player("player1", {
       height: "383",
@@ -31,10 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  function videoPlay(event) {
-    player1.target.videoPlay();
-  }
-
   playBtnSecond.addEventListener("click", function onYouTubeIframeAPIReady() {
     player = new YT.Player("player2", {
       height: "383",
@@ -45,10 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   });
-
-  function videoPlay(event) {
-    player2.target.videoPlay();
-  }
 
   playBtnThird.addEventListener("click", function onYouTubeIframeAPIReady() {
     player = new YT.Player("player3", {
@@ -62,6 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function videoPlay(event) {
-    player3.target.videoPlay();
+    event.target.playVideo();
   }
 });
